@@ -42,6 +42,9 @@ void getConfig() {
 			}
 		}
 	}
-	else std::cout << "Config File doesnt exist!" << std::endl;
+	else {
+		std::ofstream writeFile("config");
+		writeFile << "seperator ChangeMe!\ndefaultNameColour ChangeMe!\ndefaultName ChangeMe!\0";
+	}
     file.close();
 }
